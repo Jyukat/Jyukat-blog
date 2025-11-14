@@ -1,0 +1,26 @@
+baseURL: https://hacktooth.xo.je/
+languageCode: it-IT
+title: hacktooth
+theme: PaperMod
+
+enableRobotsTXT: true
+
+params:
+  profileMode:
+    enabled: true
+    title: "Giuseppe Catania"
+    subtitle: "Diplomato presso **[Istituto Professionale di Santa Ninfa](https://www.istitutodaguirre.edu.it/struttura/iiss-daguirre-salemi-alighieri-partanna/istituto-professionale-santa-ninfa/)** 🇮🇹, da lì cominciai ad appassionarmi a tutto cio che è tecnologia, ad oggi nutro l'hobby della **programmazione**, **reverse engineering**, **Intelligenza Artificiale** e **sicurezza informatica**.
+Per altre info su di me visitate la pagina **[About me](https://hacktooth.xo.je/about)**"
+    imageUrl: "image/io.webp"
+    imageTitle: "Me in the matrix"
+    imageWidth: 300 # custom size
+    imageHeight: 300 # custom size
+    buttons:
+      - name: Blog
+        url: "/blog"
+      - name: Github
+        url: "https://github.com/Jyukat"
+
+  socialIcons:
+    - name: "YouTube"
+      url: "https://www.youtube.com/@itshacktooth"
