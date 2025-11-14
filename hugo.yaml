@@ -9,9 +9,7 @@ params:
   profileMode:
     enabled: true
     title: "Giuseppe Catania 'hacktooth' or 'Jyukat' aka 'jNe'"
-    subtitle: 
-    "Diplomato presso **[Istituto Professionale di Santa Ninfa](https://www.istitutodaguirre.edu.it/struttura/iiss-daguirre-salemi-alighieri-partanna/istituto-professionale-santa-ninfa/)** 🇮🇹, appassionato di tecnologia e **programmazione**, **reverse engineer**, **hacker etico**
-    Per ulteriori info su di me visitate la pagina **[About me](https://hacktooth-blog.pages.dev/about)**"
+    subtitle: "Diplomato presso **[Istituto Professionale di Santa Ninfa](https://www.istitutodaguirre.edu.it/struttura/iiss-daguirre-salemi-alighieri-partanna/istituto-professionale-santa-ninfa/)** 🇮🇹, appassionato di tecnologia e **programmazione**, **reverse engineer**, **hacker etico**. Per ulteriori info su di me visitate la pagina **[About me](https://hacktooth-blog.pages.dev/about)**"
     imageUrl: "image/io.webp"
     imageTitle: "Me in the matrix"
     imageWidth: 300
