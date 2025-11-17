@@ -1,7 +1,7 @@
 ---
 date: '2025-11-16T16:32:55+01:00'
 draft: false
-title: 'Git - Github Tutorial'
+title: 'Git & Github Tutorial per principianti'
 categories: [tutorials]
 tags: [git, github, guide]
 cover:
@@ -9,12 +9,12 @@ cover:
     hiddenInList: false
 ---
 
-Sono da tantissimi anni che programmo a livello amatoriale per progetti personali molto piccoli, ma ormai da un paio di anni ho contribuito a sviluppare applicativi
-con un piccolo team di developer sparsi in Europa.
+Sono da tantissimi anni che programmo a livello amatoriale per progetti personali molto piccoli,
+ ma ormai da un paio di anni ho contribuito a sviluppare applicativi con un piccolo team di developer sparsi in Europa.
 
 Non sapevo nulla di come gestire un progetto più ampio, da qui ho dovuto imparare ad usare Git e Github.
 
-In questa guida per principianti voglio farvi vedere le principali funzioni di Git.
+In questa guida mirata per principianti voglio farvi vedere le principali funzioni di Git.
 
 ## ❓ Cos'è Git
 
@@ -25,7 +25,7 @@ Permette ai team di sviluppare in modo collaborativo, creando copie locali del c
 Una volta che avrete imparato ad usare Git anche per i vostri progetti personali
 non ne farete a meno di usarlo!
 
-### Iniziamo con il tutorial!
+**Iniziamo con il tutorial !**
 
 ## 🔧 1. Installazione di Git
 
@@ -33,7 +33,7 @@ Ovviamente dobbiamo avere Git installato sul nostro sistema:
 
 Per prima cosa dovrete scaricalo da: [https://git-scm.com](https://git-scm.com), seguire l'istallazione passo-passo e assicurarsi di usare le impostazioni predefinite.
 
-Una volta installato Git nel vostro computer aprite il vostro terminale e digitate il comando :
+Una volta installato Git nel vostro computer aprite il vostro terminale e digitate il comando:
 
 ```bash
 git --version
@@ -52,7 +52,6 @@ git config --global user.email "tua.email@example.com"
 
 > I comandi sopra elencati servono per identificarti nei commit. GitHub usa queste info per associare i commit al tuo profilo.
 
-
 ## 📁 3. Creare un nuovo progetto locale
 
 ```bash
@@ -64,7 +63,6 @@ git init
 - `mkdir`: crea una cartella.
 - `cd`: entra nella cartella.
 - `git init`: trasforma la cartella in un **repository Git locale**.
-
 
 ## 🌐 4. Collegare il repository locale a GitHub
 
@@ -78,7 +76,6 @@ git remote add origin https://github.com/tuonome/mio-progetto.git
 
 - `git remote add`: collega il tuo progetto locale al repository su GitHub.
 - `origin` è il nome standard del remoto (può essere qualsiasi nome, ma `origin` è la convenzione).
-
 
 ## ✍️ 5. Lavorare sul progetto e salvare i cambiamenti
 
@@ -105,7 +102,6 @@ git commit -m "Primo commit: aggiunto file iniziali"
 ```
 
 > Crea una instantanea del progetto in questo momento. Il messaggio deve essere **chiaro e breve**.
-
 
 ## ☁️ 6. Caricare il progetto su GitHub
 
@@ -181,12 +177,16 @@ git push
 
 ## CONSIGLI PRATICI E ALTRI SPUNTI
 
-- #### Commit frequenti: Fai commit piccoli e frequenti
-- #### Messaggi descrittivi: Usa messaggi di commit chiari
-- #### Pull prima del push: Sempre aggiornare prima di pushare
-- #### Branch per feature: Usa branch separati per ogni feature
-- #### Backup regolare: Pusha regolarmente su GitHub
+- ### Commit frequenti: Fai commit piccoli e frequenti
 
-### Video tutorial
+- ### Messaggi descrittivi: Usa messaggi di commit chiari
+
+- ### Pull prima del push: Sempre aggiornare prima di pushare
+
+- ### Branch per feature: Usa branch separati per ogni feature
+
+- ### Backup regolare: Pusha regolarmente su GitHub
+
+## Video tutorial
 
 {{< youtube jpOqT_JWric >}}
