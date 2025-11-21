@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Jyukat</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Jyukat</description>
+    <generator>Hugo -- 0.151.2</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Thu, 20 Nov 2025 23:00:19 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AutoIt v3: il “piccolo grande” linguaggio per Windows</title>
+      <link>http://localhost:1313/posts/autoit-introduzione/</link>
+      <pubDate>Thu, 20 Nov 2025 23:00:19 +0100</pubDate>
+      <guid>http://localhost:1313/posts/autoit-introduzione/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Una guida rapida per scoprire di cosa si tratta, perché può tornarti utile e come scrivere il tuo primo programma in meno di cinque minuti o imparare a programmare.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;cosa-è-autoit-v3&#34;&gt;Cosa è AutoIt v3?&lt;/h3&gt;
+&lt;p&gt;AutoIt è un linguaggio di scripting, nato per automatizzare Windows. Con il tempo è cresciuto e si evoluto alla versione v3, diventando un vero e proprio linguaggio di programmazione &lt;strong&gt;general-purpose&lt;/strong&gt;, pur rimanendo estremamente &lt;strong&gt;leggero&lt;/strong&gt; e &lt;strong&gt;facile da apprendere&lt;/strong&gt;.&lt;br&gt;
+La sintassi ricorda il BASIC: poche righe per fare quello che con C/C++ faresti con dozzine di righe di codice, senza bisogno di runtime aggiuntivi o IDE particolari.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git &amp; Github Tutorial per principianti</title>
+      <link>http://localhost:1313/posts/github-tutorial/</link>
+      <pubDate>Sun, 16 Nov 2025 16:32:55 +0100</pubDate>
+      <guid>http://localhost:1313/posts/github-tutorial/</guid>
+      <description>&lt;p&gt;Sono da tantissimi anni che programmo a livello amatoriale per progetti personali molto piccoli,
+ma ormai da un paio di anni ho contribuito a sviluppare applicativi con un piccolo team di developer sparsi in Europa.&lt;/p&gt;
+&lt;p&gt;Non sapevo nulla di come gestire un progetto più ampio, da qui ho dovuto imparare ad usare Git e Github.&lt;/p&gt;
+&lt;p&gt;In questa guida mirata per principianti voglio farvi vedere le principali funzioni di Git.&lt;/p&gt;
+&lt;h2 id=&#34;-cosè-git&#34;&gt;❓ Cos&amp;rsquo;è Git&lt;/h2&gt;
+&lt;p&gt;Git è un sistema di controllo versione distribuito e open source che traccia la cronologia delle modifiche ai file di un progetto.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Benvenuti nel mio blog</title>
+      <link>http://localhost:1313/posts/benvenuti/</link>
+      <pubDate>Thu, 13 Nov 2025 22:51:50 +0100</pubDate>
+      <guid>http://localhost:1313/posts/benvenuti/</guid>
+      <description>&lt;p&gt;Benvenuto/a nel mio blog, questo è il mio primo post, e voglio introdurre una piccola descrizione del sito.
+In questo spazio web voglio condividere con voi lettori le mie &lt;strong&gt;esperienze&lt;/strong&gt; nel ambito &lt;strong&gt;tecnologico&lt;/strong&gt;!
+Parlerò principalmente di &lt;strong&gt;informatica&lt;/strong&gt;, da come realizzare un programma, difendersi dalle insidie del web e non solo.&lt;/p&gt;
+&lt;p&gt;Questi sono i temi che tratterò con più frequenza e approfondimento:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Programmazione&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Sistemi Operativi&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Sistemi di Crittografia&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Criptovalute&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Framework Qt&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Git &amp; Github Tutorial per principianti | Jyukat</title>
+<meta name="keywords" content="git, github, guide">
+<meta name="description" content="Sono da tantissimi anni che programmo a livello amatoriale per progetti personali molto piccoli,
+ma ormai da un paio di anni ho contribuito a sviluppare applicativi con un piccolo team di developer sparsi in Europa.
+Non sapevo nulla di come gestire un progetto più ampio, da qui ho dovuto imparare ad usare Git e Github.
+In questa guida mirata per principianti voglio farvi vedere le principali funzioni di Git.
+❓ Cos&rsquo;è Git
+Git è un sistema di controllo versione distribuito e open source che traccia la cronologia delle modifiche ai file di un progetto.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/github-tutorial/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/github-tutorial/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Jyukat (Alt + H)">Jyukat</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Git &amp; Github Tutorial per principianti
+    </h1>
+    <div class="post-meta"><span title='2025-11-16 16:32:55 +0100 CET'>November 16, 2025</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager" src="http://localhost:1313/images/github-guide.webp" alt="">
+        
+</figure>
+  <div class="post-content"><p>Sono da tantissimi anni che programmo a livello amatoriale per progetti personali molto piccoli,
+ma ormai da un paio di anni ho contribuito a sviluppare applicativi con un piccolo team di developer sparsi in Europa.</p>
+<p>Non sapevo nulla di come gestire un progetto più ampio, da qui ho dovuto imparare ad usare Git e Github.</p>
+<p>In questa guida mirata per principianti voglio farvi vedere le principali funzioni di Git.</p>
+<h2 id="-cosè-git">❓ Cos&rsquo;è Git<a hidden class="anchor" aria-hidden="true" href="#-cosè-git">#</a></h2>
+<p>Git è un sistema di controllo versione distribuito e open source che traccia la cronologia delle modifiche ai file di un progetto.</p>
+<p>Permette ai team di sviluppare in modo collaborativo, creando copie locali del codice su cui lavorare insieme, e di gestire le modifiche in modo efficiente tramite <strong>snapshot</strong> (istantanee) e <strong>commit</strong> (salvataggi). È ampiamente utilizzato nello sviluppo software per la sua <strong>flessibilità</strong>.</p>
+<p>Una volta che avrete imparato ad usare Git anche per i vostri progetti personali
+non ne farete a meno di usarlo!</p>
+<p><strong>Iniziamo con il tutorial !</strong></p>
+<h2 id="-1-installazione-di-git">🔧 1. Installazione di Git<a hidden class="anchor" aria-hidden="true" href="#-1-installazione-di-git">#</a></h2>
+<p>Ovviamente dobbiamo avere Git installato sul nostro sistema:</p>
+<p>Per prima cosa dovrete scaricalo da: <a href="https://git-scm.com">https://git-scm.com</a>, seguire l&rsquo;istallazione passo-passo e assicurarsi di usare le impostazioni predefinite.</p>
+<p>Una volta installato Git nel vostro computer aprite il vostro terminale e digitate il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>Se l&rsquo;installazione è avvenuta con successo premendo INVIO il terminale mostrerà la versione di Git installata. Fatto questo adesso siamo pronti a configurare Git per poi creare una cartella per il vostro progetto.</p>
+<h2 id="-2-configurazione-iniziale-una-sola-volta-per-pc">🧱 2. Configurazione iniziale (una sola volta per PC)<a hidden class="anchor" aria-hidden="true" href="#-2-configurazione-iniziale-una-sola-volta-per-pc">#</a></h2>
+<p>Sempre nel vostro terminale digitate questi due comandi :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;Tuo Nome&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;tua.email@example.com&#34;</span>
+</span></span></code></pre></div><blockquote>
+<p>I comandi sopra elencati servono per identificarti nei commit. GitHub usa queste info per associare i commit al tuo profilo.</p>
+</blockquote>
+<h2 id="-3-creare-un-nuovo-progetto-locale">📁 3. Creare un nuovo progetto locale<a hidden class="anchor" aria-hidden="true" href="#-3-creare-un-nuovo-progetto-locale">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir mio-progetto
+</span></span><span style="display:flex;"><span>cd mio-progetto
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><ul>
+<li><code>mkdir</code>: crea una cartella.</li>
+<li><code>cd</code>: entra nella cartella.</li>
+<li><code>git init</code>: trasforma la cartella in un <strong>repository Git locale</strong>.</li>
+</ul>
+<h2 id="-4-collegare-il-repository-locale-a-github">🌐 4. Collegare il repository locale a GitHub<a hidden class="anchor" aria-hidden="true" href="#-4-collegare-il-repository-locale-a-github">#</a></h2>
+<p>Vai su <a href="https://github.com">https://github.com</a> (registrati se ancora non lo hai fatto) → crea un <strong>nuovo repository</strong> (es. <code>mio-progetto</code>). <strong>Non aggiungere README</strong> per ora.</p>
+<p>Poi nel terminale:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin https://github.com/tuonome/mio-progetto.git
+</span></span></code></pre></div><ul>
+<li><code>git remote add</code>: collega il tuo progetto locale al repository su GitHub.</li>
+<li><code>origin</code> è il nome standard del remoto (può essere qualsiasi nome, ma <code>origin</code> è la convenzione).</li>
+</ul>
+<h2 id="-5-lavorare-sul-progetto-e-salvare-i-cambiamenti">✍️ 5. Lavorare sul progetto e salvare i cambiamenti<a hidden class="anchor" aria-hidden="true" href="#-5-lavorare-sul-progetto-e-salvare-i-cambiamenti">#</a></h2>
+<h3 id="a-controllare-lo-stato">a. Controllare lo stato<a hidden class="anchor" aria-hidden="true" href="#a-controllare-lo-stato">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status
+</span></span></code></pre></div><blockquote>
+<p>Mostra quali file sono stati modificati, aggiunti o eliminati.</p>
+</blockquote>
+<h3 id="b-aggiungere-i-file-alla-area-di-staging">b. Aggiungere i file alla &ldquo;area di staging&rdquo;<a hidden class="anchor" aria-hidden="true" href="#b-aggiungere-i-file-alla-area-di-staging">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span></code></pre></div><blockquote>
+<p>Aggiunge <strong>tutti</strong> i file modificati o nuovi. Puoi anche usare <code>git add nomefile.txt</code> per aggiungere solo uno specifico file.</p>
+</blockquote>
+<h3 id="c-fai-un-commit-salvataggio-definitivo">c. Fai un commit (salvataggio definitivo)<a hidden class="anchor" aria-hidden="true" href="#c-fai-un-commit-salvataggio-definitivo">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Primo commit: aggiunto file iniziali&#34;</span>
+</span></span></code></pre></div><blockquote>
+<p>Crea una instantanea del progetto in questo momento. Il messaggio deve essere <strong>chiaro e breve</strong>.</p>
+</blockquote>
+<h2 id="-6-caricare-il-progetto-su-github">☁️ 6. Caricare il progetto su GitHub<a hidden class="anchor" aria-hidden="true" href="#-6-caricare-il-progetto-su-github">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><ul>
+<li><code>git branch -M main</code>: rinomina il branch principale in <code>main</code> (GitHub usa questo nome).</li>
+<li><code>git push -u origin main</code>: carica i commit su GitHub. La flag <code>-u</code> serve per collegare il branch locale al remoto (dopo il primo push basterà usare <code>git push</code>).</li>
+</ul>
+<hr>
+<h2 id="-7-scaricare-aggiornamenti-dal-repository-remoto">🔄 7. Scaricare aggiornamenti dal repository remoto<a hidden class="anchor" aria-hidden="true" href="#-7-scaricare-aggiornamenti-dal-repository-remoto">#</a></h2>
+<p>Se lavori da un altro PC o altri collaboratori hanno fatto modifiche:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git pull
+</span></span></code></pre></div><blockquote>
+<p>Scarica e <strong>unisce</strong> automaticamente le modifiche dal repository remoto al tuo progetto locale.</p>
+</blockquote>
+<hr>
+<h2 id="-8-lavorare-con-i-branch-rami">🌿 8. Lavorare con i branch (rami)<a hidden class="anchor" aria-hidden="true" href="#-8-lavorare-con-i-branch-rami">#</a></h2>
+<p>I branch servono per sviluppare funzionalità senza rovinare il codice principale.</p>
+<h3 id="a-creare-un-nuovo-branch">a. Creare un nuovo branch<a hidden class="anchor" aria-hidden="true" href="#a-creare-un-nuovo-branch">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b nuova-funzionalita
+</span></span></code></pre></div><blockquote>
+<p>Crea e passa automaticamente al nuovo branch.</p>
+</blockquote>
+<h3 id="b-tornare-al-branch-principale">b. Tornare al branch principale<a hidden class="anchor" aria-hidden="true" href="#b-tornare-al-branch-principale">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+</span></span></code></pre></div><h3 id="c-unire-un-branch-al-main">c. Unire un branch al main<a hidden class="anchor" aria-hidden="true" href="#c-unire-un-branch-al-main">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git merge nuova-funzionalita
+</span></span></code></pre></div><blockquote>
+<p><strong>Unisce</strong> le modifiche del branch <code>nuova-funzionalita</code> nel branch corrente (es. <code>main</code>).</p>
+</blockquote>
+<hr>
+<h2 id="-9-comandi-utili-extra">🧹 9. Comandi utili extra<a hidden class="anchor" aria-hidden="true" href="#-9-comandi-utili-extra">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Comando</th>
+          <th>Spiegazione</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git log</code></td>
+          <td>Mostra la cronologia dei commit</td>
+      </tr>
+      <tr>
+          <td><code>git diff</code></td>
+          <td>Mostra le differenze tra file modificati ma non ancora commitati</td>
+      </tr>
+      <tr>
+          <td><code>git clone https://github.com/tuonome/mio-progetto.git</code></td>
+          <td>Scarica un repository esistente da GitHub</td>
+      </tr>
+      <tr>
+          <td><code>git reset --hard</code></td>
+          <td>Annulla <strong>tutte</strong> le modifiche locali non commitate (<strong>attenzione: perdi il lavoro non salvato!</strong>)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-flusso-di-lavoro-tipico-riassunto">✅ Flusso di lavoro tipico (riassunto)<a hidden class="anchor" aria-hidden="true" href="#-flusso-di-lavoro-tipico-riassunto">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Descrizione chiara&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><h2 id="consigli-pratici-e-altri-spunti">CONSIGLI PRATICI E ALTRI SPUNTI<a hidden class="anchor" aria-hidden="true" href="#consigli-pratici-e-altri-spunti">#</a></h2>
+<ul>
+<li>
+<h3 id="commit-frequenti-fai-commit-piccoli-e-frequenti">Commit frequenti: Fai commit piccoli e frequenti<a hidden class="anchor" aria-hidden="true" href="#commit-frequenti-fai-commit-piccoli-e-frequenti">#</a></h3>
+</li>
+<li>
+<h3 id="messaggi-descrittivi-usa-messaggi-di-commit-chiari">Messaggi descrittivi: Usa messaggi di commit chiari<a hidden class="anchor" aria-hidden="true" href="#messaggi-descrittivi-usa-messaggi-di-commit-chiari">#</a></h3>
+</li>
+<li>
+<h3 id="pull-prima-del-push-sempre-aggiornare-prima-di-pushare">Pull prima del push: Sempre aggiornare prima di pushare<a hidden class="anchor" aria-hidden="true" href="#pull-prima-del-push-sempre-aggiornare-prima-di-pushare">#</a></h3>
+</li>
+<li>
+<h3 id="branch-per-feature-usa-branch-separati-per-ogni-feature">Branch per feature: Usa branch separati per ogni feature<a hidden class="anchor" aria-hidden="true" href="#branch-per-feature-usa-branch-separati-per-ogni-feature">#</a></h3>
+</li>
+<li>
+<h3 id="backup-regolare-pusha-regolarmente-su-github">Backup regolare: Pusha regolarmente su GitHub<a hidden class="anchor" aria-hidden="true" href="#backup-regolare-pusha-regolarmente-su-github">#</a></h3>
+</li>
+</ul>
+<h2 id="video-tutorial">Video tutorial<a hidden class="anchor" aria-hidden="true" href="#video-tutorial">#</a></h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jpOqT_JWric?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/git/">Git</a></li>
+      <li><a href="http://localhost:1313/tags/github/">Github</a></li>
+      <li><a href="http://localhost:1313/tags/guide/">Guide</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Jyukat</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
