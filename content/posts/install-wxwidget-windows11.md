@@ -22,7 +22,7 @@ Se state leggendo questa guida sicuramente saprete cos'è wxWidget nello specifi
 
 Andiamo dritto al sodo:
 
-1. Inanzittutto dovrai creare una cartella dove poter inserita la libreria, per convenzione la chiamerò 'dev'.
+1. Inanzittutto dovrai creare una cartella dove poter inserire la libreria, per convenzione la chiamerò 'dev'.
 2. Ora dovrai clonare la repo github di vcpkg
 
 *vcpkg è un sistema di gestione pacchetti per librerie open source gestita e mantenuta da Microsoft e dalla community C++.*
