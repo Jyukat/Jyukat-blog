@@ -1,9 +1,9 @@
 ---
 date: '2025-11-28T14:47:40+01:00'
 draft: false
-title: 'Perché programmare in C/C++ oggi è spesso sconveniente'
-categories: []
-tags: []
+title: 'Perché programmare in C/C++ è spesso sconveniente'
+categories: [programming]
+tags: [cpp, electron]
 cover:
   image: images/cpp-vs-electron.png
   hiddenInList: false
@@ -28,7 +28,7 @@ C e C++ concedono grandi poteri… e richiedono grande responsabilità e sopratt
 
 ### **Buffer overflow, use-after-free, memory leak…**
 
-Sono da anni che programmatori hanno a che vedere con bug fixing critici, questo perchè quando si programma in C/C++ e facile cadere in errori soprattutto quando mancano certe accortezze e si è distratti.
+Sono da anni che programmatori hanno a che vedere con bug fixing critici, questo perchè quando si programma in C/C++ è facile cadere in errori soprattutto quando mancano certe accortezze e si è distratti.
 
 Sono problemi noti da decenni, e continuano a tormentarci. Qualsiasi programmatore C++ sa che basta una distrazione:
 
@@ -56,7 +56,7 @@ Certo, puoi programmare “in modo sicuro”, ma richiede disciplina, esperienza
 
 ## 2. **Il confronto con i linguaggi memory-safe**
 
-Oggi linguaggi come **Rust**, **Go**, **C#** o **Java** offrono una sicurezza maggiore. Rust, in particolare, ha dimostrato che *(non sempre)* è possibile ottenere prestazioni che si avvicinano al C++ *senza* sacrificare la sicurezza della memoria.
+Oggi linguaggi come **Rust**, **Go**, **C#** o **Java** offrono una sicurezza maggiore. Rust, in particolare, ha dimostrato che *(non sempre attenzione)* è possibile ottenere prestazioni che si avvicinano al C++ *senza* sacrificare la sicurezza della memoria.
 
 Le aziende anche quelle senza scopo di lucro, stanno iniziando a rendersi conto dei costi del C++:
 
@@ -67,10 +67,13 @@ Le aziende anche quelle senza scopo di lucro, stanno iniziando a rendersi conto 
 - tempi di sviluppo solitamente più lunghi
 
 Tant’è che persino Mozilla, Microsoft, Amazon e Google stanno adottando Rust in componenti critici.
+Addirittura il **Kernel Linux** è dall' inizio del 2025 che sta cominciando a implementare patch in **Rust**, e c'è da dire con non poche discussioni/litigate tra i mainteiner del progetto.
 
-Questo non significa però che il C++ sia un linguaggio da buttare, diciamo che forse è meglio passare a uno standard che introduca la memory-safe, un esempio lampante sotto gli occhi di tutti è il **Kernel Linux**, che dall' inizio del 2025 sta cominciando a convertire e ad implementare patch in **Rust**.
+Questo non significa che il C++ sia un linguaggio da buttare, diciamo che forse è meglio passare a uno standard che introduca Sicurezza, questa mia affermazione è discussa ancora oggi tra programmatori ed è stata proposta un anno fa ai developer del prossimo standard.
 
-> Ovviamente Rust comporta anch'esso delle problematiche note; i disservizi di CLOUDFLARE che hanno colpito quasi tutto internet a Novembre del 2025, sono stati causati da poche righe di codice Rust.
+Potete avere maggiori informazioni al riguardo al seguente link [Safe C++](https://safecpp.org/draft.html).
+
+> Ovviamente Rust comporta anch'esso delle problematiche note; i disservizi di CLOUDFLARE che hanno colpito quasi tutto internet a Novembre del 2025, sono stati causati da poche righe di codice Rust andato in Panic.
 > 
 > Per piu dettagli a riguardo visitate leggete questo [articolo](https://www.miamammausalinux.org/2025/11/il-post-mortem-del-disastro-cloudflare-ci-parla-di-rust-errori-banali-e-illusioni-sulla-sicurezza/)
 
@@ -146,7 +149,7 @@ C++ svolgerà sempre un ruolo importante, ma non è più il linguaggio “univer
 
 ## **Conclusione**
 
-Programmare in C++ oggi non è “sbagliato”, ma spesso diventa sconveniente quando si considerano sicurezza, tempi di sviluppo e gestione della memoria. Se da un lato abbiamo un linguaggio potente ma potenzialmente pericoloso, dall'altro abbiamo framework come **Electron** che risolve i problemi di produttività a scapito dell’efficienza o linguaggi come **Rust** che gestiscono meglio la memoria, ma non sono immuni a <u>cattive condotte di programmazione</u>.
+Programmare in C++ oggi non è “sbagliato”, ma spesso diventa sconveniente quando si considerano sicurezza, tempi di sviluppo e gestione della memoria. Se da un lato abbiamo un linguaggio potente ma potenzialmente pericoloso, dall'altro abbiamo framework come **Electron** che risolve i problemi di produttività a scapito dell’efficienza o linguaggi come **Rust** che gestiscono meglio la memoria, ma introducono complessità aggiuntiva e non sono immuni a **cattive condotte di programmazione**.
 
 Il futuro probabilmente troverà un equilibrio: linguaggi come Rust si faranno strada, e i toolkit nativi moderni torneranno ad essere competitivi. Nel frattempo, dobbiamo accettare che l’evoluzione del software passa anche attraverso compromessi: non sempre i più eleganti, ma quelli che permettono di costruire prodotti più rapidamente e in modo più sicuro.
 
